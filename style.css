@@ -1,4 +1,3 @@
-/* The page is NOT responsive. You can implement responsiveness yourself if you wanna have some fun 😃 */
 
 :root {
   --color-primary: #5ec576;
@@ -211,6 +210,18 @@ img {
   background-color: var(--color-primary-darker);
   color: #333;
 }
+.nav__icon {
+  display: none;
+}
+#check {
+  display: none;
+}
+.nav__icon svg {
+  cursor: pointer;
+  height: 3rem;
+  width: 3rem;
+  fill: var(--color-primary);
+}
 
 /* @media (max-width: 767px) {
   .nav__links {
@@ -223,6 +234,36 @@ img {
   .nav {
     width: 100vw;
     background-color: var(--color-nav);
+  }
+  .nav__icon {
+    display: block;
+  }
+  .nav__links {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: #fff;
+    z-index: -1;
+    transition: all 0.6s ease-in-out;
+  }
+  #check:checked ~ .nav__links {
+    right: 0;
+  }
+  .nav ul li {
+    margin-bottom: 4rem;
+  }
+  .nav__link:link,
+  .nav__link:visited {
+    font-size: 1.7rem;
+  }
+  .nav__link--btn:link,
+  .nav__link--btn:visited {
+    padding: 1rem 2rem;
   }
 }
 @media (max-width: 630px) {
@@ -310,10 +351,6 @@ h4 {
   }
 }
 @media (max-width: 700px) {
-  .header {
-    padding: 0 4rem;
-  }
-
   .header__title {
     display: flex;
     flex-direction: column;
@@ -344,9 +381,6 @@ h4 {
 
   h4 {
     font-size: 2rem;
-  }
-   .header {
-    height:50vh;
   }
 }
 
@@ -473,6 +507,11 @@ h4 {
   /* JUST PRESENTATIONAL */
   font-size: 1.7rem;
   padding: 2.5rem 7rem 6.5rem 7rem;
+}
+@media (max-width: 535px) {
+  .operations__content {
+    padding: 2.5rem 3rem 6rem 3rem;
+  }
 }
 
 .operations__content--active {
@@ -653,6 +692,21 @@ h4 {
   display: grid;
   grid-template-columns: 6.5rem 1fr;
   column-gap: 2rem;
+}
+@media (max-width: 767px) {
+  #section--3 {
+    height: 100vh;
+  }
+  .slider {
+    height: 80%;
+  }
+  .slide {
+    height: 90%;
+  }
+  .testimonial__author {
+    margin-top: 4rem;
+    margin-left: 0rem;
+  }
 }
 
 .testimonial__photo {
